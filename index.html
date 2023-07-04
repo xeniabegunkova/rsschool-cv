@@ -3,6 +3,9 @@
 
 <head>
     <title>CV</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./style.css">
 </head>
 
 <body class="page">
@@ -16,15 +19,32 @@
         </section>
 
         <div class="info">
+            <img src="./img/avatar.jpg" alt="photo" class="info__photo">
             <section class="section section__contacts">
-                <h3 class="title contacts__title">Contact information:</h3>
-                <p class="contacts__info"><i>email:</i> kseniabegunkova@yandex.ru</p>
-                <p class="contacts__info"><i>telegram:</i> @ksenia_beg</p>
-                <p class="contacts__info"><i>discord:</i> kseniabegunkova#1710</p>
+                <h2 class="title contacts__title">Contact information:</h2>
+                <nav>
+                    <ul>
+                        <li class="contacts__info"><i>email:</i>
+                            <a href="https://mail.yandex.ru/compose?mailto=kseniabegunkova@yandex.ru&subject=&body="
+                                class="contacts__info-link" target="_blank">kseniabegunkova@yandex.ru</a>
+                        </li>
+                        <li class="contacts__info"><i>telegram:</i>
+                            <a href="https://t.me/kseniabeg" class="contacts__info-link" target="_blank">@ksenia_beg</a>
+                        </li>
+                        <li class="contacts__info"><i>discord:</i>
+                            <a href="https://discordapp.com/users/673984233684860928/" class="contacts__info-link"
+                                target="_blank">kseniabegunkova</a>
+                        </li>
+                        <li class="contacts__info"><i>github:</i>
+                            <a href="https://github.com/xeniabegunkova" class="contacts__info-link"
+                                target="_blank">xeniabegunkova</a>
+                        </li>
+                    </ul>
+                </nav>
             </section>
 
             <section class="section section__description">
-                <h3 class="title description__title">Information about yourself:</h3>
+                <h2 class="title description__title">Information about yourself:</h2>
                 <p class="descriprion__text">
                     I work as a forensic expert, but I want to change my profession. Not so
                     long ago I started learning web development and I liked it. That's why I
@@ -36,7 +56,7 @@
         </div>
 
         <section class="section section__skills">
-            <h3 class="title skills__title">Information about skills:</h3>
+            <h2 class="title skills__title">Information about skills:</h2>
             <ul class="skills__list">
                 <li class="skills__list-name">JavaScript;</li>
                 <li class="skills__list-name">HTML;</li>
@@ -52,7 +72,7 @@
         </section>
 
         <section class="code-exapmle">
-            <h3 class="title code-exapmle__title">Code example:</h3>
+            <h2 class="title code-exapmle__title">Code example:</h2>
             <p class="code-example__text">function multiply(a, b)<br>{ return a * b }</p>
         </section>
 
@@ -187,12 +207,26 @@
         </section>
 
         <section class="section section__english">
-            <h3 class="title english__title">Information about English skill</h3>
+            <h2 class="title english__title">Information about English skill</h2>
             <p class="english__level">B1</p>
         </section>
     </main>
 
     <footer class="footer">
+        <nav class="footer__items">
+            <ul class="footer__list">
+                <li>
+                    <a href="https://rs.school/js/" class="footer__link" target="_blank">
+                        <img src="./img/rs_school_js.svg" class="footer__img" alt="The Rolling Scopes logo">
+                        <b>The Rolling Scopes</b>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/xeniabegunkova" class="footer__link" target="_blank">
+                        Github</a>
+                </li>
+            </ul>
+        </nav>
         <p class="footer__year">2023</p>
     </footer>
 

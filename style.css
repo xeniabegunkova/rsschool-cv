@@ -1,6 +1,5 @@
 .page {
     text-align: center;
-    background-color: #ffffff;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
     -moz-text-size-adjust: 100%;
@@ -21,7 +20,7 @@
 .header {
     font-size: 0.6rem;
     text-align: left;
-    margin-left: 20px;
+    margin: auto;
 }
 
 .header__title {
@@ -29,25 +28,48 @@
 }
 
 .info {
-    margin: 0 auto;
+    margin: auto;
     padding: 0;
-    margin-left: 20px;
     display: grid;
-    grid-template-columns: repeat(auto-fill, 364px);
-    column-gap: 24px;
+    grid-template-columns: repeat(auto-fill, 350px);
+    gap: 20px;
+    align-items: center;
 }
 
+@media screen and (max-width: 1090px) {
+    .info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 70%;
+    }
+}
+
+.section__contacts {
+    height: 210px;
+}
 
 .profile {
     text-align: left;
-    margin-right: 60%;
-    margin-left: 20px;
+    margin: auto;
     border-bottom: 1px #3f3f3f solid;
     margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
 }
 
 .profile__name {
     color: #3f3f3f;
+    text-align: center;
+    margin: auto;
+    padding-bottom: 30px;
+}
+
+.info__photo {
+    width: 189px;
+    height: 291px;
+    margin: auto;
 }
 
 .title {
@@ -66,10 +88,39 @@
     border-radius: 25px;
 }
 
+.contacts__title {
+    display: flex;
+    flex-direction: column;
+}
+
 .contacts__info {
     margin: 0;
     margin: 3px 0;
     padding: 0;
+    list-style-type: none;
+}
+
+.contacts__info-link {
+    text-decoration: none;
+    color: #696969;
+    position: relative;
+    line-height: 1;
+}
+
+.contacts__info-link::after {
+    display: block;
+    position: absolute;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: rgba(245, 200, 225);
+    content: '';
+    transition: width 0.3s ease-out;
+}
+
+.contacts__info-link:hover::after,
+.contacts__info-link:focus::after {
+    width: 100%;
 }
 
 .contacts__info:last-child {
@@ -77,14 +128,14 @@
 }
 
 .section__skills {
-    margin-right: 20px;
-    margin-top: 20px;
-    width: 50%;
-    margin-left: 5%;
+    width: 70%;
+    margin: 40px auto;
+    ;
 }
 
 .skills__list {
-    text-align: left;
+    list-style-type: none;
+    padding: inherit;
 }
 
 .project {
@@ -97,9 +148,8 @@
 }
 
 .section__projects {
-    margin-left: 20px;
-    margin-right: 20px;
-    width: 1280px;
+    margin: auto;
+    width: 70%;
 }
 
 .project__title {
@@ -128,9 +178,36 @@
 }
 
 .section__english {
-    margin-top: 20px;
-    width: 100%;
-    margin-left: 20px;
+    margin: 40px auto;
+    width: 70%;
+}
+
+.footer {
+    margin: auto;
+    padding-bottom: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 70%;
+}
+
+.footer__list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.footer__link {
+    display: flex;
+    color: #000000;
+    font-size: 15px;
+    padding-bottom: 10px;
+    border: none;
+    text-decoration: none;
+}
+
+.footer__img {
+    width: 40px;
 }
 
 @media screen and (max-width: 892px) {
@@ -138,38 +215,14 @@
         width: 100%;
     }
 
-    .info {
-        margin-right: 20px;
-        margin: 5px;
-        grid-template-columns: repeat(auto-fill, 320px);
-        column-gap: 24px;
-    }
-
-    .section__skills {
-        width: 70%;
-    }
-
-    .section__projects {
-        margin: 0 auto;
-        width: 739px;
-    }
-
     .project__discription {
         margin: 0 auto;
         padding: 0;
         list-style-type: none;
     }
-
-    .section__english {
-        margin-left: 10px;
-        width: 739px;
-    }
 }
 
 @media screen and (max-width: 740px) {
-    .info {
-        width: 300px;
-    }
 
     .section__description {
         margin-top: 20px;
@@ -178,21 +231,5 @@
     .section {
         border: 4px solid #ffffdf;
         text-align: center;
-    }
-
-    .section__skills {
-        width: 80%;
-        margin-left: 35px;
-    }
-
-    .section__projects {
-        margin: 0;
-        margin-left: 5px;
-        width: 320px;
-    }
-
-    .section__english {
-        margin-left: 0px;
-        width: 320px;
     }
 }
